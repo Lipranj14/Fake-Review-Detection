@@ -8,7 +8,10 @@ This project goes beyond simple text classification by engineering human behavio
 
 The model's decision-making process is fully explainable in real-time using **SHAP (SHapley Additive exPlanations)** via an interactive Streamlit dashboard.
 
-*(Insert a screenshot of your beautiful Streamlit dashboard here!)*
+<div align="center">
+  <img src="dashboard.png" alt="Fake Review Detection Dashboard" width="800"/>
+</div>
+
 
 ## 🚀 Key Technical Features
 - **Advanced Feature Engineering:** Engineered custom behavioral metrics (e.g., `exclamation_count`, `rating_deviation`, `verified_purchase`) directly from raw text and metadata.
