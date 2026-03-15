@@ -11,6 +11,12 @@ The model's decision-making process is fully explainable in real-time using **SH
 <div align="center">
   <img src="dashboard.png" alt="Fake Review Detection Dashboard" width="800"/>
 </div>
+<div align="center">
+  <img src="dashboard2.png" alt="Fake Review Detection Dashboard" width="800"/>
+</div>
+<div align="center">
+  <img src="dashboard3.png" alt="Fake Review Detection Dashboard" width="800"/>
+</div>
 
 ## 📦 Dataset
 This project is built to process the **[Amazon Product Reviews Dataset from Kaggle](https://www.kaggle.com/datasets)** (500K+ reviews). 
