@@ -12,6 +12,10 @@ The model's decision-making process is fully explainable in real-time using **SH
   <img src="dashboard.png" alt="Fake Review Detection Dashboard" width="800"/>
 </div>
 
+## 📦 Dataset
+This project is built to process the **[Amazon Product Reviews Dataset from Kaggle](https://www.kaggle.com/datasets)** (500K+ reviews). 
+
+To make this repository instantly runnable for recruiters and developers without requiring a massive 500MB+ CSV download, this project includes a custom `generate_dataset.py` script. This script dynamically generates a highly realistic synthetic dataset of 5,000 Amazon reviews, perfectly simulating the raw Kaggle data structure (timestamps, text, ratings, purchase verification) to train the model locally.
 
 ## 🚀 Key Technical Features
 - **Advanced Feature Engineering:** Engineered custom behavioral metrics (e.g., `exclamation_count`, `rating_deviation`, `verified_purchase`) directly from raw text and metadata.
