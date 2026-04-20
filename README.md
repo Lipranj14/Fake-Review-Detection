@@ -1,9 +1,9 @@
 <div align="center">
-  <h1>🛡️ Fake Review Detection Engine</h1>
+  <h1> Fake Review Detection Engine</h1>
   <p>A Machine Learning pipeline built to classify Amazon product reviews as Authentic or Fake using Natural Language Processing (NLP) and advanced behavioral feature engineering.</p>
 </div>
 
-## 📌 Project Overview
+##  Project Overview
 This project goes beyond simple text classification by engineering human behavioral signals to detect fraudulent reviews. It leverages a **Random Forest Classifier** trained on both **TF-IDF semantic vectors** and **metadata-driven features** (such as rating deviations, exclamation counts, and user review history). 
 
 The model's decision-making process is fully explainable in real-time using **SHAP (SHapley Additive exPlanations)** via an interactive Streamlit dashboard.
@@ -16,33 +16,33 @@ The model's decision-making process is fully explainable in real-time using **SH
 </div>
 
 
-## 📦 Dataset
+##  Dataset
 This project is built to process the **[Amazon Product Reviews Dataset from Kaggle](https://www.kaggle.com/datasets)** (500K+ reviews). 
 
 To make this repository instantly runnable for recruiters and developers without requiring a massive 500MB+ CSV download, this project includes a custom `generate_dataset.py` script. This script dynamically generates a highly realistic synthetic dataset of 5,000 Amazon reviews, perfectly simulating the raw Kaggle data structure (timestamps, text, ratings, purchase verification) to train the model locally.
 
-## 🚀 Key Technical Features
+##  Key Technical Features
 - **Advanced Feature Engineering:** Engineered custom behavioral metrics (e.g., `exclamation_count`, `rating_deviation`, `verified_purchase`) directly from raw text and metadata.
 - **NLP Vectorization:** Utilized `TfidfVectorizer` to capture semantic patterns in review text (capped at 500 max features for performance).
 - **Champion Model Training:** Trained a hyperparameter-tuned `RandomForestClassifier` optimized specifically for high Precision and F1-score on imbalanced text datasets.
 - **Model Explainability (XAI):** Integrated `shap.TreeExplainer` to generate waterfall charts that explain *exactly* which words or features triggered a "Fake" classification.
 - **Interactive UI:** Built a highly polished, responsive web application using Streamlit to demonstrate live inference and explainability.
 
-## 🛠️ Technology Stack
+##  Technology Stack
 - **Data Engineering & Manipulation**: Pandas, NumPy
 - **Machine Learning & NLP**: Scikit-Learn (Random Forest, Logistic Regression, TF-IDF)
 - **Model Explainability (XAI)**: SHAP
 - **Web UI & Dashboarding**: Streamlit
 - **Data Visualization**: Matplotlib, Seaborn
 
-## 📊 Model Performance
+## Model Performance
 To handle the extreme class imbalance of fraudulent reviews, the Random Forest model was heavily evaluated on Precision and F1-score rather than simple accuracy:
 - **Precision:** `1.00`
 - **Recall:** `1.00` 
 - **F1-Score:** `1.00`
 *(Note: These perfect scores were achieved on a synthetically generated dataset to demonstrate the feature engineering pipeline. Real-world Kaggle datasets will yield ~0.85 F1).*
 
-## ⚙️ How to Run Locally
+## How to Run Locally
 
 If you wish to run the entire pipeline from scratch, follow these steps:
 
