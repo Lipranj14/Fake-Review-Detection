@@ -10,8 +10,10 @@ from PIL import Image
 
 st.set_page_config(page_title="Amazon Review Analysis", page_icon="🛡️", layout="wide")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Custom CSS for that "Eye-catching" and "Classy" look
-with open("style.css") as f:
+with open(os.path.join(BASE_DIR, "style.css")) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # -----------------------------------------------------
@@ -20,15 +22,17 @@ with open("style.css") as f:
 @st.cache_resource
 def load_models():
     try:
-        with open("random_forest.pkl", "rb") as f:
+        with open(os.path.join(BASE_DIR, "random_forest.pkl"), "rb") as f:
             model = pickle.load(f)
-        with open("tfidf_vectorizer.pkl", "rb") as f:
+        with open(os.path.join(BASE_DIR, "tfidf_vectorizer.pkl"), "rb") as f:
             vectorizer = pickle.load(f)
-        with open("shap_explainer.pkl", "rb") as f:
-            explainer = pickle.load(f)
         
         # Load sample training data to calculate means
-        X_train = pd.read_csv("X_train_processed.csv")
+        X_train = pd.read_csv(os.path.join(BASE_DIR, "X_train_processed.csv"))
+        
+        # Instantiate SHAP explainer dynamically to avoid numba unpickling errors
+        explainer = shap.TreeExplainer(model)
+        
         return model, vectorizer, explainer, X_train
     except Exception as e:
         st.error(f"Error loading models: {e}. Please run the training scripts first.")

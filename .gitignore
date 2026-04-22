@@ -1,5 +1,8 @@
 __pycache__/
 *.pkl
+!random_forest.pkl
+!tfidf_vectorizer.pkl
 *.csv
+!X_train_processed.csv
 eda_plots/
 .DS_Store
