@@ -1,4 +1,12 @@
 <div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-2.0%2B-189AB4)](https://xgboost.readthedocs.io/)
+
+[Live Demo](https://fake-review-detection-lipranj.streamlit.app/) 
+
   <h1> Fake Review Detection Engine</h1>
   <p>A Machine Learning pipeline built to classify Amazon product reviews as Authentic or Fake using Natural Language Processing (NLP) and advanced behavioral feature engineering.</p>
 </div>
